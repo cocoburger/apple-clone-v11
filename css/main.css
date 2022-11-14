@@ -70,5 +70,7 @@ a {
 }
 
 .main-message p {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
