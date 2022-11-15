@@ -69,8 +69,114 @@ a {
   text-align: center;
 }
 
-.main-message p {
+.main-message {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 3em; /* 현재 폰트 사이트에 3배 높이로*/
+  font-size: 2.5rem;
+  /*background: rgba(0,0,0,0.3);*/
+}
+.main-message p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.main-message small {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+.description {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+/*  em vs rem  지금 현재 컨텍스트에서 폰트사이즈에 대한 비교를 쓰겠다.  */
+/* rem 현재 폰트사이즈에 비교를 할 수 있다. em은 기본 바탕값에 비교 */
+.description strong {
+  float:left;
+  margin-right: 0.2em; /* */
+  font-size: 3rem;
+  color: rgb(29,29,31);
+}
+
+#scroll-section-2 .main-message {
+  font-size: 3.5rem;
+}
+
+.desc-message {
+  width: 50%;
+  font-weight: bold;
+}
+.pin {
+  width: 1px;
+  height: 100px;
+  background: rgb(29,29,31);
+}
+.mid-message {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #888;
+}
+
+.mid-message strong {
+  color: rgb(29,29,31);
+}
+
+.canvas-caption {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  color: white;
+  background: darkorange;
+}
+
+/*1024px 이상이면 아래 css 스타일이 적용된다.*/
+
+/* rem은 고정값이다. vw는 창크기에 몇퍼센트이기 때문에 유동값이다..*/
+@media (min-width: 1024px) {
+  #scroll-section-0 h1 {
+    font-size: 9vw;
+  }
+  .main-message{
+    font-size: 4vw;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .description strong {
+    font-size: 6rem;
+  }
+  #scroll-section-2 .main-message {
+    font-size: 6vw;
+  }
+  .main-message small {
+    font-size: 1.5vw;
+  }
+  .desc-message {
+    width: 20%;
+  }
+  .mid-message {
+    font-size: 4vw;
+  }
+  .canvas-caption {
+    font-size: 2rem;
+  }
+
 }
